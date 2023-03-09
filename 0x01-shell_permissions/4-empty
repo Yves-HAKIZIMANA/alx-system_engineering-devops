@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Create an empty file called hello
+touch hello
+
+# Print a message to confirm the file has been created
+echo "The file 'hello' has been created."

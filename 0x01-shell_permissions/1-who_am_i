@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Get the effective username
+EFFECTIVE_USER=$(id -un $EUID)
+
+# Print the effective username
+echo "The effective username is: $EFFECTIVE_USER"
