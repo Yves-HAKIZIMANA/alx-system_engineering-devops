@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# create school.mgc magic file
+echo '0 string SCHOOL School data file' > school.mgc
+
+echo "Magic file created successfully."
