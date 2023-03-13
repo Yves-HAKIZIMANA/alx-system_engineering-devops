@@ -1,4 +1,10 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -printf '%f\n' | sed 's/\.gif$//' | LC_ALL=C sort -f
-
+shopt -s globstar nullglob nocaseglob
+for file in **/*.gif; do
+    if [[ -f "$file" ]]; then
+        filename=$(basename "$file" .gif)
+        echo "$filename"
+    fi
+done | LC_ALL=C sort | tr '\n' '\0' | xargs -0 -n 1 echo
+echo
 
